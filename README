@@ -14,10 +14,10 @@ Overview
 
          https://github.com/oracle/solaris-userland
 
-    That repo contains build recipies, patches, IPS manifests, etc. necessary
+    That repo contains build recipes, patches, IPS manifests, etc. necessary
     to download, prep, build, test, package and publish open source software.
-    The build infrastructure is similiar to that of the SFW consolidation in
-    that it makes use of herarchical Makefiles which provide dependency and
+    The build infrastructure is similar to that of the SFW consolidation in
+    that it makes use of hierarchical Makefiles which provide dependency and
     recipe information for building the components.  In order to build the
     contents of the Userland gate, you need to clone it.  Since you are
     reading this, you probably already have.
