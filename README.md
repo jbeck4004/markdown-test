@@ -1,9 +1,9 @@
-# Getting started with the Userland Consolidation
+ Getting started with the Userland Consolidation
 
 ## Getting Started
-This README provides a very brief overview of the gate, how to retrieve
-a copy, and how to build it.  Detailed documentation about the Userland
-gate can be found in the 'doc' directory.
+This README provides a very brief overview of the gate (i.e., source
+code repository), how to retrieve a copy, and how to build it.  Detailed
+documentation about the Userland gate can be found in the 'doc' directory.
 
 ## Overview
 The Userland consolidation maintains a project at
@@ -19,9 +19,14 @@ contents of the Userland gate, you need to clone it.  Since you are
 reading this, you probably already have.
 
 ## Getting the Bits
-As mentioned, the gate is stored in a Mercurial repository.  In order to
-build or develop in the gate, you will need to clone it.  You can do so
-with the following command
+The canonical repository is stored in Mercurial inside the Oracle firewall,
+mirrored to an external Git repository on GitHub.  In order to build or
+develop in the gate, you will need to clone it.  You can do so with one
+of the following commands.  Internal:
+
+    $ hg clone ssh://ulhg@userland.us.oracle.com//gates/gate /scratch/clone
+
+External:
 
     $ git clone https://github.com/oracle/solaris-userland.git /scratch/clone
 
@@ -39,10 +44,10 @@ all of the component directories downloading and validating the community
 source archives from the gate machine or their canonical source repository.
 
 There are two variation to this that you may find interesting.  First, you
-can cause gmake(1) to perform it's work in parallel by adding '-j (jobs)'
+can cause gmake(1) to perform its work in parallel by adding `-j (jobs)`
 to the command line.  Second, if you are only interested in working on a
 particular component, you can change directories to that component's
-directory and use 'gmake download' from that to only get it's source
+directory and use 'gmake download' from that to only get its source
 archive.
 
 ## Building the Bits.
@@ -69,23 +74,10 @@ Complete top down builds are also possible by simply running
 The 'publish' target will build each component and publish it to the
 workspace IPS repo.
 
-Tools to help facilitate build zone creation will be integrated
-shortly.  If the zone you create to build your workspace in does not have
-networking enabled, you can pre-download any community source archives into
-your workspace from the global with:
-
-    $ cd (your-workspace)/components
-    $ gmake download
-
-- You can add parallelism to your builds by adding '-j (jobs)' to your gmake
+- You can add parallelism to your builds by adding `-j (jobs)` to your gmake
   command line arguments.
 - The gate should only incrementally build what it needs to based on what has
   changed since you last built it.
   
 # Copyright
-Copyright (c) 2015-2017, Oracle and/or its affiliates. All rights reserved.
-
-# License
-Except where explicitly noted otherwise, the contents of this repository
-are subject to the terms of the Common Development and Distribution License
-([the "License"](LICENSE)).
+Copyright (c) 2010, 2017, Oracle and/or its affiliates. All rights reserved.
