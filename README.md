@@ -1,4 +1,4 @@
- Getting started with the Userland Consolidation
+# Getting started with the Userland Consolidation
 
 ## Getting Started
 This README provides a very brief overview of the gate (i.e., source
@@ -10,13 +10,12 @@ The Userland consolidation maintains a project at
 
      https://github.com/oracle/solaris-userland
 
-That repo contains build recipes, patches, IPS manifests, etc. necessary
-to download, prep, build, test, package and publish open source software.
-The build infrastructure is similar to that of the SFW consolidation in
-that it makes use of hierarchical Makefiles which provide dependency and
-recipe information for building the components.  In order to build the
-contents of the Userland gate, you need to clone it.  Since you are
-reading this, you probably already have.
+That repo contains build recipes, patches, IPS (i.e., pkg(7)) manifests,
+etc. necessary to download, prep, build, test, package and publish open
+source software.  The build infrastructure makes use of hierarchical
+Makefiles which provide dependency and recipe information for building
+the components.  In order to build the contents of the Userland gate,
+you need to clone it.  Since you are reading this, you may already have.
 
 ## Getting the Bits
 The canonical repository is stored in Mercurial inside the Oracle firewall,
