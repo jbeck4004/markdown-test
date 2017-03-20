@@ -3,7 +3,7 @@
 ## Getting Started
 This README provides a very brief overview of the gate (i.e., source
 code repository), how to retrieve a copy, and how to build it.  Detailed
-documentation about the Userland gate can be found in the 'doc' directory.
+documentation about the Userland gate can be found in the `doc` directory.
 
 ## Overview
 The Userland consolidation maintains a project at
@@ -28,7 +28,7 @@ of the following commands.  Internal:
 
 External:
 
-    $ git clone https://github.com/oracle/solaris-userland.git /scratch/clone
+    $ git clone https://github.com/oracle/solaris-userland /scratch/clone
 
 This will create a replica of the various pieces that are checked into the
 source code management system, but it does not retrieve the community
@@ -47,7 +47,7 @@ There are two variation to this that you may find interesting.  First, you
 can cause gmake(1) to perform its work in parallel by adding `-j (jobs)`
 to the command line.  Second, if you are only interested in working on a
 particular component, you can change directories to that component's
-directory and use 'gmake download' from that to only get its source
+directory and use `gmake download` from that to only get its source
 archive.
 
 ## Building the Bits.
@@ -71,7 +71,7 @@ Complete top down builds are also possible by simply running
     $ cd (your-workspace)/components
     $ gmake publish
 
-The 'publish' target will build each component and publish it to the
+The `publish` target will build each component and publish it to the
 workspace IPS repo.
 
 - You can add parallelism to your builds by adding `-j (jobs)` to your gmake
